@@ -26,7 +26,7 @@ module.exports = function(bh) {
             });
 
             if(!hasSelected && tab.checked === true) {
-                radioGroup.options[i].checked = true;
+                radioGroup.val = i;
                 hasSelected = true;
                 tabContent.mods = { selected : true };
             }
@@ -35,7 +35,7 @@ module.exports = function(bh) {
         });
 
         if(!hasSelected) {
-            radioGroup.options[0].checked = true;
+            radioGroup.val = 0;
             boxContainer[0].mods = { selected : true };
         }
 
